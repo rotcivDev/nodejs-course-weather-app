@@ -12,7 +12,7 @@ const getWeatherData = async () => {
   }, async (error, response) => {
     let currentData= response.body.current;
     let locationData = response.body.location;
-
+    debugger
     forecast(`
     Its ${locationData.localtime.split(' ').reverse().join(' ')} at ${locationData.region}, ${locationData.country}.
     Current: ${currentData.temperature}ºC 
