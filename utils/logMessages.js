@@ -1,6 +1,6 @@
 const chalk = require('chalk');
 
-const defaultLog = msg => console.log(chalk.bold(msg));
+const defaultLog = arguments => console.log(chalk.bold.white(arguments));
 
 module.exports = {
   defaultLog
