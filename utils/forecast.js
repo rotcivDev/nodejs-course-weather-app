@@ -1,6 +1,6 @@
 const request = require('postman-request');
 
-const weatherInfo = (data, callback) => {
+const forecast = (data, callback) => {
   if (!data) {
     callback('No data received! please input valid geolocation or address.', undefined);
     return;
@@ -38,4 +38,4 @@ const weatherInfo = (data, callback) => {
   });
 }
 
-module.exports = weatherInfo;
+module.exports = forecast;
