@@ -15,7 +15,7 @@ const forecast = (latitude, longitude, callback) => {
     const localDate = dateAndTime[0].split('-').reverse().join('/');
     const data =`${localDate} - ${localTime} at local time. ${current.weather_descriptions}. Temperature is currently ${current.temperature}ºC and there's ${current.cloudcover}% chance of rain.`;
     
-    callback(undefined, data);
+    callback(undefined, body);
   });
 }
 
