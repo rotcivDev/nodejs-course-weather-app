@@ -40,3 +40,11 @@ header a {
 .portrait {
     width: 250px;
 }
+
+#weather {
+    margin-top: 40px;
+}
+
+#weather img {
+    border-radius: 50%;
+}
