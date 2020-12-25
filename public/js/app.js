@@ -6,8 +6,12 @@ const weatherInput = document.getElementById("form-input");
 
 weatherForm.addEventListener("submit", ev => {
   ev.preventDefault();
+
+  weatherPanel.innerHTML = "Loading..."
+
   fetch(`/weather?address=${weatherInput.value}`).then(res => {
     res.json().then(data => {
+      if (data.error) return weatherPanel.innerHTML = `${data.error}` 
       weatherLayout(data);
     })
   })
@@ -22,6 +26,5 @@ const weatherLayout = data => {
     <p>Description: ${current.weather_descriptions}</p>
     <p>Local time: ${location.localtime}</p>
     <p>Temperature: ${current.temperature}ºC</p>
-
   `
 }
