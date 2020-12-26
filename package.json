@@ -1,13 +1,13 @@
 {
   "name": "web-server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Weather App to implement and practice NodeJS, REST API and Templating concepts.",
+  "main": "app.js",
   "scripts": {
     "start": "node src/app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Victor Salles",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.0",
