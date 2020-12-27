@@ -4,7 +4,8 @@
   "description": "Weather App to implement and practice NodeJS, REST API and Templating concepts.",
   "main": "app.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js --ext '*'"
   },
   "keywords": [],
   "author": "Victor Salles",

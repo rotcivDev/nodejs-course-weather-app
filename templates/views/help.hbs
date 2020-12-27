@@ -3,18 +3,45 @@
 <html>
 
 <head>
-    <title>Help</title>
+    <title>getWeather - Help</title>
     <link rel="icon" href="/img/weather.png">
     <link rel="stylesheet" href="/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <div class="main-content">
         {{>header}}
-        <p>{{helpText}}</p>
+
+        <a class="subtitle" href="https://www.udemy.com/course/the-complete-nodejs-developer-course-2/" target="__blank">
+            <h1>Node.js Developer Course - Weather App</h1>
+        </a>
+
+        <div id="help-page">
+            <p>App created from a NodeJs course to improve API development skills.</p>
+            <p><strong>Receiving improvements gradually while studying and practicing NodeJS.</strong></p>
+            
+            <h2>Skills:</h2>
+            <ul>
+                <li>ExpressJS</li>
+                <li>Heroku</li>
+                <li>Git</li>
+                <li>Node Debugging Tools</li>
+                <li>Callback chaining</li>
+                <li>Error handling</li>
+                <li>Destructuring</li>
+                <li>Templating</li>
+            </ul>
+        </div>
     </div>
     
     {{>footer}}
+
+    <script>
+        const helpLink = document.getElementById('help-link');
+
+        window.addEventListener('load', () => helpLink.className +=" active");
+    </script>
 </body>
 
 </html>

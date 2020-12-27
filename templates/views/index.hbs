@@ -3,25 +3,36 @@
 <html>
 
 <head>
-    <title>Weather</title>
+    <title>getWeather - General weather by region</title>
     <link rel="icon" href="/img/weather.png">
     <link rel="stylesheet" href="/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <div class="main-content">
         {{>header}}
-
         <form id="weather-form">
-            <input id="form-input" type="text">
-            <input type="submit" value="Show weather">
+            <input 
+                id="form-input" 
+                type="text"
+                placeholder="Insert a region or address.">
+            <input type="submit" value="get">
+            
         </form>
-        <div id="weather"></div>
+        <div id="weather-panel"></div>
     </div>
 
     {{>footer}}
 
     <script src="/js/app.js"></script>
+
+    <script>
+        const weatherLink = document.getElementById('weather-link');
+
+        window.addEventListener('load', () => weatherLink.className +=" active");
+    </script>
+    
 </body>
 
 </html>

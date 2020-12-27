@@ -3,9 +3,10 @@
 <html>
 
 <head>
-    <title>About</title>
+    <title>getWeather - About</title>
     <link rel="icon" href="/img/weather.png">
     <link rel="stylesheet" href="/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -15,6 +16,12 @@
     </div>
     
     {{>footer}}
+
+    <script>
+        const aboutLink = document.getElementById('about-link');
+
+        window.addEventListener('load', () => aboutLink.className +=" active");
+    </script>
 </body>
 
 </html>

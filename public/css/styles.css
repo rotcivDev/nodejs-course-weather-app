@@ -1,50 +1,144 @@
-body {
-    color: #333333;
-    font-family: arial;
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 0 16px;
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+@import url('./reset.css');
 
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh
+html {
+    font-size: 10px;
 }
 
-.main-content {
-    flex-grow: 1;
+body {
+    background: rgb(13, 17, 23);
+    color: #333333;
+    font-family: arial;
+    max-width: 110rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+header {
+    margin-bottom: 4.8rem;
+}
+
+nav {
+    padding: 1.5rem;
+}
+
+li {
+    list-style: square;
+    margin-left: 3rem;
 }
 
 footer {
     color: #888888;
-    border-top: 1px solid #eeeeee;
-    margin-top: 16px;
-    padding: 16px 0;
+    border-top: 1px solid #333;
+    margin-top: 1.6rem;
+    padding: 1.6rem 0;
+    font-size: 2rem;
 }
 
-header {
-    margin-top: 16px;
-    margin-bottom: 48px;
+strong {
+    font-weight: bold;
 }
 
-h1 {
-    font-size: 64px;
-    margin-bottom: 16px;
+img {
+    border-radius: 50%;
 }
 
-header a {
+.main-content {
+    flex-grow: 1;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.navigation__link {
     color: #888888;
-    margin-right: 16px;
+    margin-right: 1.6rem;
     text-decoration: none;
+    font-size: 2rem;
+}
+
+.navigation__link.active {
+    color: #BB5DF9;
+    border-bottom: 3px solid #BB5DF9;
+}
+
+.title, .subtitle {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+.title {
+    margin: 0;
+    font-family: 'Bungee Outline', cursive;
+    font-size: 4rem;
+    background-color: #333;
+    width: 100%;
+}
+
+.subtitle {
+    display: block;
+    font-size: 2.5rem; 
+    cursor: pointer;
+}
+
+.breadcrumb {
+    font-size: 1.3rem;
+    text-decoration: underline;
+    margin-top: 1rem;
+    color: #dfe1e5;
+}
+
+#weather-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#weather-panel {
+    margin-top: 4rem;
+    color: #fff;
+    padding: 1.5rem;
+}
+
+#form-input {
+    width: 30rem;
+    height: 4.4rem;
+    font-size: 2rem;
+    border-radius: 24px;
+    box-shadow: none;
+    border: 1px solid #dfe1e5;
+    padding-left: 1rem;
+}
+
+#form-input:focus {
+    outline: none;
+    box-shadow: 2px 5px 0px rgba(0,0,0,0.14) , 0px 1px 10px 0px rgba(0,0,0,0.12) , 0px 2px 4px -1px rgba(0,0,0,0.2);
+}
+
+input[type="submit"] {
+        margin-top: 2rem;
+        font-size: 1.7rem;
+        width: 15rem;
+        height: 3rem;
+        border-radius: 15px;
+        background-color: #333;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
 }
 
 .portrait {
-    width: 250px;
+    width: 25rem;
 }
 
-#weather {
-    margin-top: 40px;
+#help-page *, #weather-panel * {
+    margin-top: 1.2rem;
+    font-size: 1.7rem;
 }
 
-#weather img {
-    border-radius: 50%;
+@media (max-width: 800px) {
+    #weather-form {
+        justify-content: center;
+        align-items: center;
+    }
 }
